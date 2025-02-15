@@ -7,3 +7,11 @@ body {
     overscroll-behavior: contain;
   }
   
+
+  html, body {
+    overscroll-behavior: none;
+    touch-action: none;
+    height: 100%;
+    overflow: hidden;
+  }
+  

@@ -6,6 +6,14 @@ import Tool_Lib from "./Components/Tool_Lib";
 import Languages from "./Components/Languages";
 
 const App = () => {
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "F5" || (e.ctrlKey && e.key === "r")) {
+      e.preventDefault();
+    }
+  });
+  
+
   return (
     <>
       <Router>

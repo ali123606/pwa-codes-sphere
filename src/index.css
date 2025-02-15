@@ -3,16 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    overscroll-behavior: contain;
-  }
   
-
-  html, body {
-    overscroll-behavior: none;
+html, body {
+    overscroll-behavior: none; /* Prevent pull-to-refresh */
     touch-action: pan-y; /* Allow vertical scrolling */
     height: 100%;
-    overflow: auto; /* Allow scrolling */
+    overflow: hidden; /* Prevent unwanted scrolling */
   }
   
+  #root {
+    height: 100vh;
+    overflow-y: auto; /* Enable scrolling inside the app */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+  }
   

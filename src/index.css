@@ -10,8 +10,9 @@ body {
 
   html, body {
     overscroll-behavior: none;
-    touch-action: none;
+    touch-action: pan-y; /* Allow vertical scrolling */
     height: 100%;
-    overflow: hidden;
+    overflow: auto; /* Allow scrolling */
   }
+  
   

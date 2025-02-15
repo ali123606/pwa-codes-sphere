@@ -14,7 +14,9 @@ const App = () => {
   });
   
   document.addEventListener("touchmove", (event) => {
-    event.preventDefault();
+    if (event.scale !== 1) { 
+      event.preventDefault(); // Prevent zooming but allow scroll
+    }
   }, { passive: false });
   
 
